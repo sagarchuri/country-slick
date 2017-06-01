@@ -34,10 +34,10 @@ object CountryDB  extends App{
     println("Filter Countries...")
 
     val filterQuery:Query[Country,(Int,String,String,String),Seq] = countries.filter(_.id > 100)
-    println("Country with code JP is---"+filterQuery.result.statements)
+    println("Query - countries with id >100  ---"+filterQuery.result.statements)
     val rd=db.run(filterQuery.result.map(println))
 
-    println("plain query")
+    println("plain query - find JP")
 
     val selectCountry = "JP"
     val plainQuery = sql"SELECT NAME FROM COUNTRY WHERE CODE =$selectCountry".as[String]
