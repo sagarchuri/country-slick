@@ -1,5 +1,5 @@
-# country-slick
-Simple app using Slick 
+# Slick in action
+A simple app using Slick 
 
 Output-><br />
 <br />
